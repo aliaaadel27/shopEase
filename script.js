@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             users.push(newUser);
             localStorage.setItem('users', JSON.stringify(users));
             alert('Registration successful!');
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         });
     }
 });
@@ -60,14 +60,14 @@ window.onload = function () {
         if (userName) {
             document.getElementById("welcome-message").innerText = `Welcome, ${userName}!`;
         } else {
-            window.location.href = "login.html";
+            window.location.href = "index.html";
         }
     }
 
     if (window.location.href.includes('homePage.html')) {
         const userName = localStorage.getItem("userName"); 
         if (!userName) {
-            window.location.href = "login.html"; 
+            window.location.href = "index.html"; 
         }
     }
 };
@@ -77,7 +77,7 @@ function logout() {
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userName");
     localStorage.setItem("isLoggedIn", "false");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 function viewProducts() {

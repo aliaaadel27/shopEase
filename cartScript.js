@@ -12,7 +12,7 @@ function checkLoginStatus() {
         warning.textContent = 'Please log in to access the cart!';
         warning.style.display = 'block'; // Make the warning visible
         setTimeout(() => {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }, 3000); // Redirect after 3 seconds
     } else {
         warning.style.display = 'none'; // Hide the warning if logged in
